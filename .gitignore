@@ -1,0 +1,4 @@
+.env
+_site/
+photos/
+node_modules/
