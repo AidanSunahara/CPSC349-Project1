@@ -5,7 +5,17 @@ title: Home
 <header>
     <h1>{{ title }} </h1>
 </header>
+<body>
+    <h1>photos</h1>
 
+<ul>
+  {%- for photos in photos.0apgfsq.media %}
+  <li>
+    <img src="{{ photos.src.tiny }}" alt="{{ photos.alt }}">
+</li>
+  {% endfor -%}
+</ul>
+</body>
 <footer>
     <hr>
     <p>
