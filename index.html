@@ -2,26 +2,10 @@
 layout: base
 title: Home
 ---
-<header>
-    <h1>{{ title }} </h1>
-</header>
-<body>
-    <h1>photos</h1>
 
-<ul>
-  {%- for photos in photos.0apgfsq.media %}
-  <li><a target="_blank" href="photo.html">
-    <img src="{{ photos.src.tiny }}" alt="{{ photos.alt }}">
-  </a>
-</li>
-  {% endfor -%}
-</ul>
-</body>
-<footer>
-    <hr>
-    <p>
-        <small>
-            <a href="https://www.pexels.com">Photos provided by Pexels</a>
-        </small>
-    </p>
-</footer>
+{%- for photos in photos.0apgfsq.media %}
+    <a target="_self" href="photos/{{photos.id}}/index.html">
+      <img src="{{ photos.src.small }}" alt="{{ photos.alt }}" style="text-align: center;">
+    </a>
+{% endfor -%}
+

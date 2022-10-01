@@ -3,38 +3,12 @@ pagination:
   data: photos.0apgfsq.media
   size: 1
 permalink: 'photos/{{ pagination.items[0].id }}/index.html'
+layout: base
+eleventyComputed:
+  title: "{{pagination.items[0].alt}}"
 ---
-<!DOCTYPE html>
-<html lang="en">
-
-  <head>
-      <title>{{pagination.items[0].alt}} - {{pagination.items[0].photographer}}</title>
-      <link rel="stylesheet" href="https://unpkg.com/mvp.css">
-      <style>
-        nav {
-        margin-bottom: 0rem;
-      }
-      </style>
-  </head>
-
+  
   <body style="background-color: {{ pagination.items[0].avg_color }}; text-align: center;">
-    <nav>
-      <ul>
-        <li><a href="/index.html">Home</a></li>
-        <li><a href="/about/index.html">About Us</a></li>
-      </ul>
-    </nav>
     <img src="{{ pagination.items[0].src.original }}" alt="{{pagination.items[0].alt}}" style="width:25%">
-    <p><b style="color:white;"><i>{{pagination.items[0].alt}}</i></b></p>
-    <p><b style="color:white;">Shot by - <a href="{{pagination.items[0].photographer_url}}"> {{pagination.items[0].photographer}}</a></b></p>
-    <footer style="text-align: center;">
-      <hr>
-      <p>
-        <small>
-          <a href="https://www.pexels.com">Photos provided by Pexels</a>
-        </small>
-      </p>
-  </footer>
+    <p><b>Shot by - <a href="{{pagination.items[0].photographer_url}}"> {{pagination.items[0].photographer}}</a></b></p>
   </body>
-
-</html>

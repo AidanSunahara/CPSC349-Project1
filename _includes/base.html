@@ -1,12 +1,42 @@
 ---
 site: CPSC 349 - Fall 2022 - Project 1
 ---
+<!DOCTYPE html>
+<html lang="en">
 
-<head>
-    <title>{{ title }} - {{ site }}</title>
-    <link rel="stylesheet" href="https://unpkg.com/mvp.css">
-</head>
+    <head>
+        <meta charset="utf-8">
+        <title>{{ title }} - {{ site }}</title>
+        <link rel="stylesheet" href="https://unpkg.com/mvp.css">
+        <style>
+            nav {
+            margin-bottom: 0rem;
+            }
+        </style>
+    </head>
 
-<body>
-    {{ content }}
-</body>
+    <body>
+        
+        <nav>
+            <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/about/index.html">About Us</a></li>
+            </ul>
+        </nav>
+
+        <header>
+            <h1>{{ title }}</h1>
+        </header>
+
+        {{ content }}
+
+        <footer style="text-align: center;">
+            <hr>
+            <p>
+                <small>
+                    <a href="https://www.pexels.com">Photos provided by Pexels</a>
+                </small>
+            </p>
+        </footer>
+    </body>
+</html>
