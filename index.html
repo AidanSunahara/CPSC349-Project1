@@ -2,20 +2,21 @@
 layout: base
 title: Home
 ---
+<nav>
+  <ul>
+    <li><a href="about.html">Home</a></li>
+    <li><a href="#">About Us</a></li>
+  </ul>
+</nav>
 <header>
     <h1>{{ title }} </h1>
 </header>
 <body>
-    <h1>photos</h1>
-
-<ul>
   {%- for photos in photos.0apgfsq.media %}
-  <li><a target="_blank" href="photo.html">
-    <img src="{{ photos.src.tiny }}" alt="{{ photos.alt }}">
-  </a>
-</li>
+    <a target="_blank" href="photos/{{photos.id}}/index.html">
+      <img src="{{ photos.src.tiny }}" alt="{{ photos.alt }}">
+    </a>
   {% endfor -%}
-</ul>
 </body>
 <footer>
     <hr>
