@@ -12,3 +12,9 @@ eleventyComputed:
     <img src="{{ pagination.items[0].src.original }}" alt="{{pagination.items[0].alt}}" style="width:25%">
     <p><b>Shot by - <a href="{{pagination.items[0].photographer_url}}"> {{pagination.items[0].photographer}}</a></b></p>
   </body>
+----------- 
+<body style= "background-color: {{ pagination.items[0].avg_color }};">
+  <h1> Photographer - {{pagination.items[0].photographer}} </h1>
+  <h2> Description - {{pagination.items[0].alt}} </h2>
+  <img src="{{ pagination.items[0].src.medium }} ">
+</body>
