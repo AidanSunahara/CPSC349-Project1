@@ -5,11 +5,11 @@ pagination:
 permalink: 'photos/{{ pagination.items[0].id }}/index.html'
 layout: base
 eleventyComputed:
-  background_color: "{{ pagination.items[0].avg_color }}"
   title: "{{ pagination.items[0].alt }}"
   photographer: "{{ pagination.items[0].photographer }}"
   photographer_url: "{{ pagination.items[0].photographer_url }}"
   photographer_id: "{{ pagination.items[0].photographer_id }}"
+  background_color: "{{ pagination.items[0].avg_color }}"
 ---
 <figure>
   <img src="{{ pagination.items[0].src.large }}" title="{{ title }}" alt="{{ title }}">
@@ -17,4 +17,3 @@ eleventyComputed:
       <b><i>Shot by - <a target="_blank" href="{{ photographer_url }}"> {{ photographer }} ({{ photographer_id }})</a></i></b>
     </figcaption>
 </figure>
-
