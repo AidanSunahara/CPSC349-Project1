@@ -1,35 +1,11 @@
 ---
 layout: base
 title: Home
+description: A collection of photographs relating to music. <br> Click on a photo for more information and a closer look!
 ---
------------
 {%- for photos in photos.0apgfsq.media %}
     <a target="_self" href="photos/{{photos.id}}/index.html">
-      <img src="{{ photos.src.small }}" alt="{{ photos.alt }}" style="text-align: center;">
+      <img src="{{ photos.src.tiny }}" title="{{ photos.alt }}" alt="{{ photos.alt }}">
     </a>
 {% endfor -%}
------------
-<nav>
-  <ul>
-    <li><a href="about.html">Home</a></li>
-    <li><a href="#">About Us</a></li>
-  </ul>
-</nav>
-<header>
-    <h1>{{ title }} </h1>
-</header>
-<body>
-  {%- for photos in photos.0apgfsq.media %}
-    <a target="_blank" href="photos/{{photos.id}}/index.html">
-      <img src="{{ photos.src.tiny }}" alt="{{ photos.alt }}">
-    </a>
-  {% endfor -%}
-</body>
-<footer>
-    <hr>
-    <p>
-        <small>
-            <a href="https://www.pexels.com">Photos provided by Pexels</a>
-        </small>
-    </p>
-</footer>
+
