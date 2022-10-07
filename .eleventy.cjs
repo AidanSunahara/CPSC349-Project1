@@ -5,12 +5,3 @@ module.exports = function (eleventyConfig) {
     open: true
   })
 }
-module.exports = {
-  dir: {
-      input: ".",
-      includes: "_includes",
-      data: "_data",
-      output: "docs"
-   }
-};
-
